@@ -1,0 +1,9 @@
+<view class="tag-div">
+  <t-icon name="tag-filled" />
+  <view class="tag-desc">补充符合您的房源标签({{value.length}})</view>
+  <view bind:tap="toTagList" class="select-btn">
+    <view>补充</view>
+    <t-icon name="chevron-right" />
+  </view>
+
+</view>

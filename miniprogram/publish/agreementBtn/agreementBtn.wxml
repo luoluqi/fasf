@@ -1,0 +1,6 @@
+<view class="parent">
+    <t-checkbox  checked="{{checked}}" bind:change="onChange" content="同意" style="padding:0 0rpx 0 0;" />
+    <navigator class="link" url="/pages/agreement/agreement"  >《用户服务协议》</navigator>
+    <label>及</label>
+    <navigator class="link" url="/pages/agreement/agreement"  >《隐私政策》</navigator>
+</view>

@@ -1,0 +1,7 @@
+<view bind:tap="toDetail" class="card-item">
+  <view class="data-label">二手</view>
+  <image class="card-img" src="{{secHand.imgList[0]}}" mode="aspectFill" />
+  <view class="card-title">{{secHand.title}}</view>
+  <!-- <view class="card-desc">{{house.roomNum}}室{{house.hallNum}}厅{{house.toiletNum}}卫 · {{house.area}}㎡</view> -->
+  <view class="price">{{secHand.price}}{{unitStr}}</view>
+</view>

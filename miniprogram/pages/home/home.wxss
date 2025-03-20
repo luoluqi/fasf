@@ -1,0 +1,77 @@
+.app-name{
+  background: #fff;
+  padding: 0 20rpx;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+.logo{
+  position: absolute;
+  bottom: 10rpx;
+  width: 200rpx;
+}
+.ser-con{
+  background: #fff;
+  padding: 1rpx;
+}
+.search-p{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20rpx;
+  padding: 0rpx 20rpx;
+  box-sizing: border-box;
+  border: 2rpx solid var(--td-brand-color);
+  border-radius: 40rpx;
+ 
+}
+.city-p{
+  display: flex;
+  align-items: center;
+  height: 70rpx;
+}
+.search-input{
+  margin: 0 0 0 100rpx;
+  height: 70rpx;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.sou{
+  background: var(--td-brand-color);
+  color: #fff;
+  padding: 10rpx;
+  border-radius: 20rpx;
+  font-size: 24rpx;
+}
+
+.func-list{
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 0;
+  background: #fff;
+}
+.func-item{
+
+}
+.func-img{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  display: block;
+}
+.func-text{
+  text-align: center;
+  padding: 10rpx 0 0 0;
+  font-size: 28rpx;
+}
+
+.card-list{
+  margin: 20rpx;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}

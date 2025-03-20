@@ -1,0 +1,42 @@
+<view class="house-item" bind:tap="toDetail">
+  <image class="img" src="{{secHand.imgList[0]}}" mode="aspectFill" />
+  <view>
+    <view class="title">{{secHand.title}}</view>
+
+    <view class="price">{{secHand.price}}{{unitStr}}</view>
+    <view class="address">
+      <t-icon name="location" />
+      {{secHand.locationName}}
+    </view>
+    <view wx:if="{{showOperate}}">
+
+      <view class="oper-con">
+        <view wx:if="{{secHand.status == 1}}" class="status-up">已上架</view>
+        <view wx:if="{{secHand.status == 0}}" class="status-down">已下架</view>
+        <view catch:tap="uncollect" wx:if="{{showCollect}}" class="delete-btn">
+          <t-icon name="star-filled"></t-icon>
+          收藏
+        </view>
+
+      </view>
+      <view class="oper-con">
+        <view catch:tap="toUp" wx:if="{{secHand.status == 0 && showUp}}" class="up-btn">
+          <t-icon name="arrow-up"></t-icon>
+          上架
+        </view>
+        <view catch:tap="toDown" wx:if="{{secHand.status == 1 && showDown}}" class="down-btn">
+          <t-icon name="arrow-down"></t-icon>
+          下架
+        </view>
+        <view catch:tap="toEdit" wx:if="{{showEdit}}" class="down-btn">
+          <t-icon name="edit"></t-icon>
+          修改
+        </view>
+        <view catch:tap="toDelete" wx:if="{{showDelete}}" class="delete-btn">
+          <t-icon name="delete"></t-icon>
+          删除
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

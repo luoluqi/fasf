@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "本地服务",
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "localServiceRecord": "/dataDisplay/localServiceRecord/localServiceRecord"
+  }
+}

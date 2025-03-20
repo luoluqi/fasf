@@ -1,0 +1,21 @@
+page {
+  --td-brand-color: #fe552e;
+  --td-brand-color-active: #e05a3c;
+  --td-brand-color-disabled: #f79781;
+
+  --color-1: #dc4949;
+  --color-2: #398dec;
+  --color-3: #07c160;
+  --color-gray: #666;
+
+  background: #f6f6f6;
+  font-size: 32rpx;
+}
+
+button:focus{
+  outline: 0;
+}
+
+button::after{
+  border: none;
+}

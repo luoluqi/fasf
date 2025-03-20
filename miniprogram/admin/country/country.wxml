@@ -1,0 +1,23 @@
+<t-button bind:tap="toAdd" theme="primary">添加</t-button>
+
+
+
+<t-swipe-cell wx:for="{{list}}" right="{{right}}" data-item="{{item}}" bind:click="onActionClick">
+    <t-cell bind:tap="onCellClick" data-item="{{item}}">
+        <view slot="title">
+            <view>{{item.name}}</view>
+            <view>{{item.english}}</view>
+            <view>{{item.sort}}</view>
+        </view>
+
+    </t-cell>
+
+</t-swipe-cell>
+
+
+<t-popup visible="{{addVisible}}" bind:visible-change="onAddVisibleChange" placement="bottom">
+    <t-input label="名称" placeholder="请输入名称" model:value="{{name}}" />
+    <t-input label="英文名称" placeholder="请输入英文名称" model:value="{{english}}" />
+    <t-input label="排序" placeholder="请输入排序" type="number" model:value="{{sort}}" />
+    <t-button bind:tap="submit" theme="primary" block>提交</t-button>
+</t-popup>

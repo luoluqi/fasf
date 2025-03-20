@@ -1,0 +1,23 @@
+<view wx:if="{{value.length == 0}}" bind:tap="open" class="title">包含费用</view>
+<view wx:else bind:tap="open" class="title">{{value}}</view>
+
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="bottom">
+  <view class="sub-title">包含费用</view>
+  <view class="check-list">
+    <t-checkbox-group value="{{current}}" bind:change="handleGroupChange">
+      <t-checkbox label="水费" value="水费" icon="rectangle" />
+      <t-checkbox label="电费" value="电费" icon="rectangle" />
+      <t-checkbox label="燃气费" value="燃气费" icon="rectangle" />
+      <t-checkbox label="宽带费" value="宽带费" icon="rectangle" />
+      <t-checkbox label="物业费" value="物业费" icon="rectangle" />
+      <t-checkbox label="取暖费" value="取暖费" icon="rectangle" />
+      <t-checkbox label="有线电视费" value="有线电视费" icon="rectangle" />
+      <t-checkbox label="停车费" value="停车费" icon="rectangle" />
+    </t-checkbox-group>
+  </view>
+  <view class="btn-p">
+    <t-button bind:tap="cancel" size="large">取消</t-button>
+    <t-button bind:tap="confirm" theme="primary" size="large">确定</t-button>
+  </view>
+
+</t-popup>

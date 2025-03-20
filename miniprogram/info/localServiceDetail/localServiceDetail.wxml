@@ -1,0 +1,35 @@
+<t-swiper current="{{0}}" autoplay="{{true}}" duration="{{500}}" interval="{{3000}}" navigation="{{ { type: 'fraction' } }}" list="{{localService.imgList}}" bind:click="onTapSwiper">
+</t-swiper>
+
+<view class="title">{{localService.title}}</view>
+<!-- <view class="price-p">
+    <label class="price">{{localService.price}}</label>
+    <label class="unit">元</label>
+</view> -->
+
+<view class="line"></view>
+
+<view class="kan-title">介绍</view>
+<view class="desc">{{localService.remark}}</view>
+<view class="line"></view>
+<view bind:tap="callPhone" wx:if="{{localService.phone}}" class="address">
+    <view class="address-name">
+        <t-icon name="chat-double" style="margin: 0 10rpx 0 0;" />
+        <view>联系电话 {{localService.phone}}</view>
+    </view>
+    <t-icon name="chevron-right" />
+</view>
+<view wx:if="{{localService.wechat}}" class="address">
+    <view class="address-name">
+        <t-icon name="logo-wechat-stroke" style="margin: 0 10rpx 0 0;" />
+        <view>微信号 {{localService.wechat}}</view>
+    </view>
+    <t-icon name="chevron-right" />
+</view>
+<!-- <view class="line"></view>
+<mapBlock width="{{750}}" height="{{500}}" longitude="{{localService.longitude}}" latitude="{{localService.latitude}}"
+bind:tap="openLocation"></mapBlock> -->
+
+<bottomBtns status="{{localService.status}}" isCollect="{{collectObj}}" phone="{{localService.phone}}" wechat="{{localService.wechat}}"
+bind:collect="collect"
+></bottomBtns>

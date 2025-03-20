@@ -1,0 +1,22 @@
+
+.goods{
+  background: #fff;
+  margin: 30rpx 0;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.goods-title{
+  font-size: 32rpx;
+  color: #333;
+  margin: 0 0 20rpx 0;
+}
+.goods-desc{
+  font-size: 28rpx;
+  color: #666;
+  margin: 0 0 20rpx 0;
+}
+.order-list{
+  padding: 30rpx;
+  text-align: right;
+  color: var(--td-brand-color);
+}

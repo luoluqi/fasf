@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "secHandRecord": "/dataDisplay/secHandRecord/secHandRecord"
+  }
+}

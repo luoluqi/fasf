@@ -1,0 +1,21 @@
+.title{
+  width: 200rpx;
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis; 
+}
+.sub-title{
+  color: #666;
+  text-align: center;
+  font-size: 28rpx;
+  padding: 30rpx 0;
+}
+.check-list{
+  text-align: left;
+  padding: 0 0 30rpx 0
+}
+.btn-p{
+  display: flex;
+  justify-content: space-around;
+  padding: 0 0 30rpx 0;
+}

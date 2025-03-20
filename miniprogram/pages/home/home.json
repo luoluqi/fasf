@@ -1,0 +1,12 @@
+{
+  "navigationStyle":"custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "t-tag": "tdesign-miniprogram/tag/tag",
+    "houseCard": "/dataDisplay/houseCard/houseCard",
+    "jobCard": "/dataDisplay/jobCard/jobCard",
+    "secHandCard": "/dataDisplay/secHandCard/secHandCard",
+    "localServiceCard": "/dataDisplay/localServiceCard/localServiceCard",
+    "agreementTip": "/components/agreementTip/agreementTip"
+  }
+}

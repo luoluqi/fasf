@@ -1,0 +1,46 @@
+
+.userinfo{
+ 
+}
+.open-data-p{
+  background: #fff;
+  display: flex;
+  align-items: center;
+  padding:0 0 30rpx 30rpx;
+}
+.head-img-p{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.head-img{
+  height: 100%;
+  width: 100%;
+ 
+}
+.nick-name{
+  margin: 0 0 0 30rpx;
+}
+
+.func-list{
+  display: flex;
+  align-items: center;
+  background: #fff;
+}
+.func-item{
+  padding: 30rpx 40rpx;
+  text-align: center;
+  font-size: 28rpx;
+}
+.func-img{
+  width: 60rpx;
+  height: 60rpx;
+}
+.aa-btn{
+    height: 100rpx; width: 100rpx;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+}

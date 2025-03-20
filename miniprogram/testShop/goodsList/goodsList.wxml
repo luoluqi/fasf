@@ -1,0 +1,14 @@
+
+<view bind:tap="toOrderList" class="order-list">订单列表</view>
+
+<view class="goods">
+  <view class="goods-title">商品1</view>
+  <view class="goods-desc">商品描述</view>
+  <t-button data-fee="1" bind:tap="buy" theme="primary">购买</t-button>
+</view>
+
+<view class="goods">
+  <view class="goods-title">商品2</view>
+  <view class="goods-desc">商品描述</view>
+  <t-button data-fee="3" bind:tap="buy" theme="primary">购买</t-button>
+</view>

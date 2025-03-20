@@ -1,0 +1,20 @@
+<view class="sear-con">
+  <topSpace></topSpace>
+  <menuButtonHeight></menuButtonHeight>
+  <view class="navi">
+    <t-icon bind:tap="toBack" class="back-btn" name="chevron-left" size="60rpx" />
+    <!-- <t-search class="sear-input" placeholder="搜索" shape="round" /> -->
+    <view bind:tap="toSearchPage" class="sear-input">
+      <view class="tag-p" >
+        <t-tag wx:if="{{keyword}}" catch:tap="stop"
+        max-width="{{130}}" bind:close="closeTag" 
+        closable variant="outline">{{keyword}}</t-tag>
+      </view>
+      <view style="height: 2rpx; width: 10rpx;"></view>
+      <t-button bind:tap="toSearchPage" theme="primary" size="small" shape="round" style="margin: 0;">搜索</t-button>
+    </view>
+  </view>
+</view>
+
+<topSpace></topSpace>
+<menuButtonHeight></menuButtonHeight>

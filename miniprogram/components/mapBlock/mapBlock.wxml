@@ -1,0 +1,7 @@
+<view class="map-p" style="width:{{width}}rpx; height:{{height}}rpx;">
+  <map id="myMap" class="map"  latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}"
+  enable-zoom="{{false}}" enable-scroll="{{false}}" enable-rotate="{{false}}"
+  
+  ></map>
+  <view bind:tap="onTap" class="map-mask"></view>
+</view>

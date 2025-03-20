@@ -1,0 +1,23 @@
+
+
+<view wx:if="{{!money || !payType}}" bind:tap="open" class="placeholder">请选择</view>
+<view wx:else bind:tap="open" >{{money}} | {{payType}}</view>
+
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="bottom">
+  <view class="title">月租金</view>
+  <view class="cell-a">租金</view>
+  <view class="cell-b">
+    <input model:value="{{money}}" type="number" placeholder="请输入租金" />
+  </view>
+  <view style="height: 30rpx;"></view>
+  <view class="cell-a">付款方式</view>
+  <view class="cell-b">
+    <view wx:for="{{payList}}" data-item="{{item}}"
+    bind:tap="onPay"
+     class="pay-item {{payType == item ? 'active' : ''}}">{{item}}</view>
+   
+  </view>
+  <view class="bot-p">
+    <t-button bind:tap="confirm" theme="primary" size="large" block >确定</t-button>
+  </view>
+</t-popup>

@@ -1,0 +1,48 @@
+page{
+  background: #fff;
+}
+
+.container{
+  display: flex;
+ 
+}
+.left{
+  width: 200rpx;
+  overflow-y: scroll;
+}
+.right{
+  flex-grow: 1;
+  overflow-y: scroll;
+}
+.country{
+  height: 150rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background: #f8f8f8;
+  border-bottom: 1rpx solid #efefef;
+  font-size: 28rpx;
+  color: #333;
+}
+.country.active{
+  background: #fff;
+  
+}
+.country-name{
+    padding: 0 0 10rpx 0;
+}
+.city{
+  height: 150rpx;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+  padding: 0 0 0 30rpx;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  color: #333;
+}
+.city-name{
+    padding: 0 0 10rpx 0;
+}

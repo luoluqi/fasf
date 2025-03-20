@@ -1,0 +1,15 @@
+<view  class="oper-con">
+    <button class="oper-btn" open-type="share">
+        <t-icon name="jump" size="40rpx" />
+        <view>分享</view>
+    </button>
+    <view bind:tap="collect" class="oper-btn">
+        <t-icon wx:if="{{isCollect}}" class="star-active" name="star-filled" size="40rpx" />
+        <t-icon wx:else name="star" size="40rpx" />
+        <view>收藏</view>
+    </view>
+    <view wx:if="{{status == 1 && wechat}}" bind:tap="showWechat" class="add-wechat">加微信</view>
+    <view wx:if="{{status == 1 && phone}}" bind:tap="callPhone" class="call">打电话</view>
+    <view wx:if="{{status == 0}}" class="xia-jia">已下架</view>
+</view>
+<view style="height: 500rpx;"></view>

@@ -1,0 +1,105 @@
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>标题</view>
+  </view>
+  <view class="value">
+    <input model:value="{{title}}" placeholder="填写优质标题能让更多人看到您的帖子" />
+  </view>
+
+</view>
+
+<view style="background: #fff;">
+  <t-textarea model:value="{{remark}}" placeholder="建议您填写更多的细节，如服务公司规模、公司环境等。真实可信的内容更容易获得来电咨询!" maxlength="500" disableDefaultPadding="{{true}}" indicator />
+</view>
+<view style="height: 30rpx;"></view>
+<view class="cell">
+    <view class="label">
+      <view class="xin">*</view>
+      <view>薪水结算方式</view>
+    </view>
+    <view class="value">
+      <select title="薪水结算方式" model:value="{{salaryType}}" options="{{salaryTypeOptions}}"></select>
+    </view>
+
+  </view>
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>最低薪水</view>
+  </view>
+  <view class="value">
+    <input model:value="{{minSalary}}" type="number" placeholder="请填写" />
+  </view>
+</view>
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>最高薪水</view>
+  </view>
+  <view class="value">
+    <input model:value="{{maxSalary}}" type="number" placeholder="请填写" />
+  </view>
+</view>
+
+<view style="height: 30rpx;"></view>
+<view class="img-list">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>图片</view>
+  </view>
+  <uploadImg id="uploadImg"></uploadImg>
+</view>
+<view style="height: 30rpx;"></view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>当前城市</view>
+  </view>
+  <view  class="value">
+    <selectCity model:city-id="{{cityId}}" model:city-name="{{cityName}}" model:longitude="{{longitude}}" model:latitude="{{latitude}}" ></selectCity>
+  </view>
+</view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>位置</view>
+  </view>
+  <view class="value">
+    <selectLocation model:location-name="{{locationName}}" model:longitude="{{longitude}}" model:latitude="{{latitude}}"></selectLocation>
+  </view>
+</view>
+
+
+<view class="cell">
+  <view class="label">
+    <!-- <view class="xin">*</view> -->
+    <view>联系电话</view>
+  </view>
+  <view class="value">
+    <input model:value="{{phone}}" type="number" placeholder="填写电话" />
+  </view>
+</view>
+
+<view class="cell">
+  <view class="label">
+    <!-- <view class="xin">*</view> -->
+    <view>微信号</view>
+  </view>
+  <view class="value">
+    <input model:value="{{wechat}}" placeholder="填写微信号" />
+  </view>
+</view>
+
+<view style="height: 500rpx;"></view>
+
+<view class="bottom-fix">
+   <!-- <agreementBtn model:checked="{{isAgree}}"></agreementBtn> -->
+  <t-button bind:tap="submit" theme="primary" size="large" block>
+    <view wx:if="{{_id}}">保存</view>
+    <view wx:else>免费发布</view>
+  </t-button>
+  
+</view>

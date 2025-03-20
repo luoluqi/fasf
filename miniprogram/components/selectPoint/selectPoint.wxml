@@ -1,0 +1,5 @@
+
+<map  markers="{{markers}}"
+bindtap="onTab" bindlabeltap="onTab" bindpoitap="onTab" bindpolylinetap="bindpolylinetap"
+id="myMap" longitude="{{longitude}}" latitude="{{latitude}}"
+style="width: {{width}}rpx; height: {{height}}rpx;"></map>

@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "租房列表",
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "houseRecord": "/dataDisplay/houseRecord/houseRecord"
+  }
+}

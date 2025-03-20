@@ -1,0 +1,57 @@
+/* info/bottomBtns/bottomBtns.wxss */
+.oper-con {
+    background: #fff;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    height: 120rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.1);
+}
+
+.oper-btn {
+    font-size: 32rpx;
+    color: #333;
+    width: 20%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    line-height: 40rpx;
+}
+.add-wechat{
+    background: var(--color-3);
+    color: #fff;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.call {
+    background: var(--td-brand-color);
+    color: #fff;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.star-active{
+    color: var(--td-brand-color);
+}
+.xia-jia {
+    background: #e3e3e3;
+    text-align: center;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

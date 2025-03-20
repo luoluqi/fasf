@@ -1,0 +1,30 @@
+.sear-con{
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 0 10rpx 0 rgba(0, 0, 0, 0.1);
+}
+.navi{
+  background: #fff;
+  display: flex;
+  align-items: center;
+
+  position: absolute;
+  bottom: 10rpx;
+}
+.back-btn{
+  padding: 0 20rpx;
+}
+.sear-input{
+  width: 400rpx;
+  height: 60rpx;
+  background: #f5f5f5;
+  border-radius: 30rpx;
+  padding: 4rpx 20rpx;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

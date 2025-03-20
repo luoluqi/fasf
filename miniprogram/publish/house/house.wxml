@@ -1,0 +1,178 @@
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>当前城市</view>
+  </view>
+  <view class="value">
+    <selectCity model:city-id="{{cityId}}" model:city-name="{{cityName}}" model:longitude="{{longitude}}" model:latitude="{{latitude}}"></selectCity>
+  </view>
+
+</view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>租房类型</view>
+  </view>
+  <view class="value">
+    <select title="租房类型" model:value="{{type}}" options="{{typeOptions}}"></select>
+  </view>
+
+</view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>位置</view>
+  </view>
+  <view class="value">
+    <selectLocation model:location-name="{{locationName}}" model:longitude="{{longitude}}" model:latitude="{{latitude}}"></selectLocation>
+  </view>
+</view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>小区名称</view>
+  </view>
+  <view class="value">
+    <input model:value="{{community}}" placeholder="请填写" />
+  </view>
+
+</view>
+
+<!-- <view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>楼栋号</view>
+  </view>
+  <view class="value">
+    <input model:value="{{doorNum}}" placeholder="请填写，例如：1号楼302" />
+  </view>
+</view> -->
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>楼层 | 总楼层</view>
+  </view>
+  <view class="value">
+    <floorSelector model:cur-floor="{{curFloor}}" model:total-floor="{{totalFloor}}"></floorSelector>
+  </view>
+
+</view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>房屋面积 （㎡）</view>
+  </view>
+  <view class="value">
+    <input model:value="{{area}}" placeholder="请填写" type="number" />
+  </view>
+</view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>户型 | 朝向</view>
+  </view>
+  <view class="value">
+    <houseTypeSelector model:room-num="{{roomNum}}" model:hall-num="{{hallNum}}" model:toilet-num="{{toiletNum}}" model:dir="{{dir}}"></houseTypeSelector>
+  </view>
+</view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>月租金</view>
+    <view class="right-tip">
+      <view class="right-tip-text">
+        <includeCost value="{{cost}}" bindchange="costChange"></includeCost>
+      </view>
+      <t-icon name="chevron-right" />
+    </view>
+  </view>
+  <view class="value">
+    <rentMoney model:money="{{money}}" model:pay-type="{{payType}}"></rentMoney>
+  </view>
+</view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>看房时间</view>
+  </view>
+  <view class="value">
+    <select title="看房时间" model:value="{{lookTime}}" options="{{lookTimeOptions}}"></select>
+  </view>
+
+</view>
+
+<view class="cell">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>入住时间</view>
+  </view>
+  <view class="value">
+    <dateTimePicker model:value="{{liveTime}}"></dateTimePicker>
+  </view>
+
+</view>
+
+<view style="height: 30rpx;"></view>
+<view class="img-list">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>房源图片</view>
+  </view>
+  <uploadImg id="uploadImg"></uploadImg>
+</view>
+<view style="height: 30rpx;"></view>
+<view class="img-list">
+  <view class="label">
+    <view class="xin">*</view>
+    <view>房源标签</view>
+  </view>
+  <view class="sub-tip">丰富信息，可以更快找到合适的租客</view>
+  <houseTag value="{{tagList}}" bindchange="tagChange"></houseTag>
+
+</view>
+
+<view style="height: 30rpx;"></view>
+
+<view style="background: #fff;">
+  <t-textarea label="房源描述" model:value="{{remark}}" placeholder="简单描述一下您的房源吧" maxlength="200" disableDefaultPadding="{{true}}" indicator />
+</view>
+
+<view style="height: 30rpx;"></view>
+
+<view class="cell">
+  <view class="label">
+    <!-- <view class="xin">*</view> -->
+    <view>联系电话</view>
+  </view>
+  <view class="value">
+    <input model:value="{{phone}}" type="number" placeholder="填写电话" />
+  </view>
+</view>
+
+<view class="cell">
+  <view class="label">
+    <!-- <view class="xin">*</view> -->
+    <view>微信号</view>
+  </view>
+  <view class="value">
+    <input model:value="{{wechat}}" placeholder="请填写微信号" />
+  </view>
+</view>
+
+<view style="height: 500rpx;"></view>
+
+<view class="bottom-fix">
+  <!-- <agreementBtn model:checked="{{isAgree}}"></agreementBtn> -->
+  <t-button bind:tap="submit" theme="primary" size="large" block>
+    <view wx:if="{{_id}}">保存</view>
+    <view wx:else>免费发布</view>
+  </t-button>
+</view>

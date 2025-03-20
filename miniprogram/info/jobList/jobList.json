@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "找工作",
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "jobRecord": "/dataDisplay/jobRecord/jobRecord"
+  }
+}

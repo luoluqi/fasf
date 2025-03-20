@@ -1,0 +1,41 @@
+page{
+  background: #fff;
+}
+.tag-p{
+  clear: both;
+}
+.title{
+  padding: 40rpx 30rpx 20rpx 30rpx;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tag-list{
+  padding: 0 30rpx;
+}
+.tag{
+  background: #f5f5f5;
+  color: #666;
+  font-size: 28rpx;
+  padding: 10rpx 20rpx;
+  float: left;
+  margin: 0 30rpx 30rpx 0;
+  border-radius: 30rpx;
+}
+.active{
+  background: var(--td-brand-color);
+  color: #fff;
+}
+
+.bottom-fix{
+  background: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 30rpx;
+  box-sizing: border-box;
+  box-shadow: 0 0 20rpx 0 rgba(0, 0, 0, 0.2);
+}

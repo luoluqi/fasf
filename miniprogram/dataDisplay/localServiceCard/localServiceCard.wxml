@@ -1,0 +1,6 @@
+<view bind:tap="toDetail" class="card-item">
+  <view class="data-label">本地服务</view>
+  <image class="card-img" src="{{localService.imgList[0]}}" mode="aspectFill" />
+  <view class="card-title">{{localService.title}}</view>
+  <!-- <view class="price">{{localService.money}}元</view> -->
+</view>

@@ -1,0 +1,16 @@
+{
+  "navigationBarTitleText": "发布租房",
+  "usingComponents": {
+    "floorSelector": "/publish/floorSelector/floorSelector",
+    "houseTypeSelector": "/publish/houseTypeSelector/houseTypeSelector",
+    "rentMoney": "/publish/rentMoney/rentMoney",
+    "includeCost": "/publish/includeCost/includeCost",
+    "select": "/components/select/select",
+    "dateTimePicker": "/components/dateTimePicker/dateTimePicker",
+    "uploadImg": "/components/uploadImg/uploadImg",
+    "houseTag": "/publish/houseTag/houseTag",
+    "selectLocation": "/components/selectLocation/selectLocation",
+    "selectCity": "/components/selectCity/selectCity",
+    "agreementBtn": "/publish/agreementBtn/agreementBtn"
+  }
+}

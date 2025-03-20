@@ -1,0 +1,55 @@
+
+.cell{
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #eee;
+  background: #fff;
+}
+.label{
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  padding: 30rpx 0;
+  /* color: #666; */
+}
+.right-tip{
+  position: absolute;
+  right: 0;
+  color: #666;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+ 
+}
+.right-tip-text{
+  text-align: right;
+  /* width: 200rpx;
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis;  */
+}
+.xin{
+  color: var(--td-brand-color);
+}
+.value{
+  padding: 0rpx 0 30rpx 10rpx;
+}
+.img-list{
+  padding: 0 30rpx 30rpx 30rpx;
+  background: #fff;
+}
+.sub-tip{
+  color: #666;
+  font-size: 24rpx;
+}
+.bottom-fix{
+  background: #fff;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 30rpx;
+  box-sizing: border-box;
+  box-shadow: 0 0 20rpx 0 rgba(0, 0, 0, 0.2);
+}

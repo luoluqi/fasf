@@ -1,0 +1,133 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/map/map",
+    "pages/my/my",
+    "pages/test/test",
+    "pages/selectCity/selectCity",
+    "pages/search/search",
+    "pages/agreement/agreement",
+    "testShop/goodsList/goodsList",
+    "testShop/testOrder/testOrder"
+  ],
+  "subpackages": [
+    {
+      "root": "publish",
+      "pages": [
+        "publishType/publishType",
+        "house/house",
+        "tagList/tagList",
+        "secHand/secHand",
+        "localService/localService",
+        "seekJob/seekJob"
+      ]
+    },
+    {
+      "root": "info",
+      "pages": [
+        "jobList/jobList",
+        "houseList/houseList",
+        "secHandList/secHandList",
+        "localServiceList/localServiceList",
+        "houseDetail/houseDetail",
+        "jobDetail/jobDetail",
+        "secHandDetail/secHandDetail",
+        "localServiceDetail/localServiceDetail"
+      ]
+    },
+    {
+      "root": "myPublish",
+      "pages": [
+        "myPublishIndex/myPublishIndex",
+        "myJobList/myJobList",
+        "myHouseList/myHouseList",
+        "mySecHandList/mySecHandList",
+        "myLocalServiceList/myLocalServiceList"
+      ]
+    },
+    {
+      "root": "myCollect",
+      "pages": [
+        "collectIndex/collectIndex",
+        "collectJobList/collectJobList",
+        "collectHouseList/collectHouseList",
+        "collectSecHandList/collectSecHandList",
+        "collectLocalServiceList/collectLocalServiceList"
+      ]
+    },
+    {
+      "root": "admin",
+      "pages": [
+        "adminIndex/adminIndex",
+        "city/city",
+        "country/country"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundColor": "#fff",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "枫叶圈城",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "custom": true,
+    "color": "#A2A9B0",
+    "selectedColor": "#07C160",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "images/51.png",
+        "selectedIconPath": "images/51.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "租房地图",
+        "iconPath": "images/51.png",
+        "selectedIconPath": "images/51.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我",
+        "iconPath": "images/51.png",
+        "selectedIconPath": "images/51.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "topSpace": "/components/topSpace/topSpace",
+    "menuButtonHeight": "/components/menuButtonHeight/menuButtonHeight",
+    "topSearch": "/components/topSearch/topSearch",
+    "topSearchInput": "/components/topSearchInput/topSearchInput",
+    "t-button": "tdesign-miniprogram/button/button",
+    "t-empty": "tdesign-miniprogram/empty/empty",
+    "t-divider": "tdesign-miniprogram/divider/divider",
+    "t-icon": "tdesign-miniprogram/icon/icon",
+    "t-search": "tdesign-miniprogram/search/search",
+    "t-popup": "tdesign-miniprogram/popup/popup",
+    "t-picker": "tdesign-miniprogram/picker/picker",
+    "t-picker-item": "tdesign-miniprogram/picker-item/picker-item",
+    "t-checkbox": "tdesign-miniprogram/checkbox/checkbox",
+    "t-checkbox-group": "tdesign-miniprogram/checkbox-group/checkbox-group",
+    "t-textarea": "tdesign-miniprogram/textarea/textarea",
+    "t-input": "tdesign-miniprogram/input/input"
+  },
+  "requiredPrivateInfos": [
+    "chooseAddress",
+    "chooseLocation",
+    "getFuzzyLocation"
+  ],
+  "permission": {
+    "scope.userFuzzyLocation": {
+      "desc": "您的位置信息将用于搜索附近的数据"
+    },
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于搜索附近的数据"
+    }
+  }
+}

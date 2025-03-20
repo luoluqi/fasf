@@ -1,0 +1,10 @@
+<view wx:if="{{value == ''}}" bind:tap="open" class="placeholder">请选择</view>
+<view wx:else bind:tap="open">{{_label}}</view>
+
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="bottom">
+
+  <t-picker visible="{{true}}" usePopup="{{false}}" title="{{title}}" cancelBtn="取消" confirmBtn="确认" value="{{_value}}" bindcancel="cancel" bindchange="onPickerChange" bindpick="onColumnChange">
+    <t-picker-item options="{{options}}"></t-picker-item>
+  </t-picker>
+
+</t-popup>

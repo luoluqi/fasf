@@ -1,0 +1,46 @@
+<view class="job-item" bind:tap="toDetail">
+  <view class="job-title">{{job.title}}</view>
+  <view class="salary">
+    <t-icon name="money" style="margin: 0 10rpx 0 0;" />
+    {{job.minSalary}}-{{job.maxSalary}}{{unitStr}}
+  </view>
+  <view wx:if="{{job.salaryType == 1}}" class="salary-type">月结</view>
+  <view wx:if="{{job.salaryType == 2}}" class="salary-type">周结</view>
+  <view wx:if="{{job.salaryType == 3}}" class="salary-type">日结</view>
+  <view class="address">
+    <t-icon name="location" style="margin: 0 10rpx 0 0;" />
+    {{job.locationName}}
+  </view>
+
+
+  <view wx:if="{{showOperate}}">
+
+    <view class="oper-con">
+      <view wx:if="{{job.status == 1}}" class="status-up">已上架</view>
+      <view wx:if="{{job.status == 0}}" class="status-down">已下架</view>
+      <view catch:tap="uncollect" wx:if="{{showCollect}}" class="delete-btn">
+        <t-icon name="star-filled"></t-icon>
+        收藏
+      </view>
+
+    </view>
+    <view class="oper-con">
+      <view catch:tap="toUp" wx:if="{{job.status == 0 && showUp}}" class="up-btn">
+        <t-icon name="arrow-up"></t-icon>
+        上架
+      </view>
+      <view catch:tap="toDown" wx:if="{{job.status == 1 && showDown}}" class="down-btn">
+        <t-icon name="arrow-down"></t-icon>
+        下架
+      </view>
+      <view catch:tap="toEdit" wx:if="{{showEdit}}" class="down-btn">
+        <t-icon name="edit"></t-icon>
+        修改
+      </view>
+      <view catch:tap="toDelete" wx:if="{{showDelete}}" class="delete-btn">
+        <t-icon name="delete"></t-icon>
+        删除
+      </view>
+    </view>
+  </view>
+</view>

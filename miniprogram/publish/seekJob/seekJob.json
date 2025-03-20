@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "发布招聘",
+  "usingComponents": {
+    "select": "/components/select/select",
+    "uploadImg": "/components/uploadImg/uploadImg",
+    "selectLocation": "/components/selectLocation/selectLocation",
+    "selectCity": "/components/selectCity/selectCity",
+    "agreementBtn": "/publish/agreementBtn/agreementBtn"
+  }
+}

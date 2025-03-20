@@ -1,0 +1,6 @@
+<view  bind:tap="toDetail" class="card-item">
+    <view class="data-label">招聘</view>
+    <image class="card-img" src="{{job.imgList[0]}}" mode="aspectFill" />
+    <view class="card-title">{{job.title}}</view>
+    <view class="price">{{job.minSalary}} - {{job.maxSalary}}{{unitStr}}</view>
+  </view>

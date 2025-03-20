@@ -1,0 +1,32 @@
+
+
+.tip-content{
+    width: 600rpx;
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+
+.title{
+    font-size: 36rpx;
+    font-weight: bold;
+    padding: 0 0 10rpx 0;
+}
+.sub-title{
+    font-size: 32rpx;
+    font-weight: bold;
+    
+}
+.content{
+    font-size: 28rpx;
+    padding:  60rpx 0 ;
+    line-height: 46rpx;
+}
+.link{
+    display: inline;
+    color: var(--td-brand-color);
+}
+.btns{
+    display: flex;
+    justify-content: space-around;
+
+}

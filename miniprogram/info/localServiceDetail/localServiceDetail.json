@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "本地服务详情",
+  "usingComponents": {
+    "t-swiper": "tdesign-miniprogram/swiper/swiper",
+    "mapBlock": "/components/mapBlock/mapBlock",
+    "bottomBtns": "/info/bottomBtns/bottomBtns"
+  }
+}

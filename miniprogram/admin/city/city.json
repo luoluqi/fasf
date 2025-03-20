@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "城市管理",
+  "usingComponents": {
+    "t-swipe-cell": "tdesign-miniprogram/swipe-cell/swipe-cell",
+    "t-cell": "tdesign-miniprogram/cell/cell",
+    "selectPoint": "/components/selectPoint/selectPoint"
+  }
+}

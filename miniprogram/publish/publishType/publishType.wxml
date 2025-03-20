@@ -1,0 +1,19 @@
+
+<view class="func-list">
+  <view bind:tap="toPublish"  data-url="/publish/seekJob/seekJob" class="func-item">
+    <image  src="/images/zp200616.png" class="func-img" />
+    <view class="func-text">招聘</view>
+  </view>
+  <view bind:tap="toPublish" data-url="/publish/house/house" class="func-item">
+    <image class="func-img" src="/images/zf200616.png" />
+    <view class="func-text">租房</view>
+  </view>
+  <view bind:tap="toPublish" data-url="/publish/secHand/secHand" class="func-item">
+    <image class="func-img"  src="/images/es200616.png" />
+    <view class="func-text">二手</view>
+  </view>
+  <view bind:tap="toPublish" data-url="/publish/localService/localService" class="func-item">
+    <image class="func-img"  src="/images/jiazhengfuwu0801.png" />
+    <view class="func-text">本地服务</view>
+  </view>
+</view>

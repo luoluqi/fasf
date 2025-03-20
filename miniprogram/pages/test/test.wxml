@@ -1,0 +1,7 @@
+
+<view class="map-p" >
+  <map class="map" bindtap="tapMap"></map>
+</view>
+
+
+<view>{{longitude}}=={{latitude}}</view>

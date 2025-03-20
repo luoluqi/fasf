@@ -1,0 +1,7 @@
+.content{
+    white-space: pre-wrap;
+    padding: 30rpx;
+}
+.title{
+    font-weight: bold;
+}

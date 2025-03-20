@@ -1,0 +1,21 @@
+
+.func-list{
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx 0;
+  background: #fff;
+}
+.func-item{
+
+}
+.func-img{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  display: block;
+}
+.func-text{
+  text-align: center;
+  padding: 10rpx 0 0 0;
+  font-size: 28rpx;
+}

@@ -1,0 +1,7 @@
+
+<localServiceRecord wx:for="{{list}}" localService="{{item}}"
+showOperate="{{true}}"  showUp="{{true}}" showDown="{{true}}" showEdit="{{true}}" showDelete="{{true}}"
+ bind:delete="onDelete" ></localServiceRecord>
+
+<t-divider wx:if="{{isMore}}" content="加载中" style="padding: 50rpx 0;" />
+<t-divider wx:else content="没有更多了" style="padding: 50rpx 0;" />

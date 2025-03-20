@@ -1,0 +1,19 @@
+<t-popup visible="{{visible}}" usingCustomNavbar bind:visible-change="onVisibleChange" placement="center">
+    <view class="tip-content">
+        <view class="title">您好，朋友</view>
+        <view class="sub-title">欢迎来到【枫叶圈城】</view>
+        <view class="content">根据相关法律规定，我们制定了
+            <navigator class="link" url="/pages/agreement/agreement">《用户服务协议及隐私政策》</navigator>
+            。在您使用【枫叶圈城】服务之前，请仔细阅读
+            <navigator class="link" url="/pages/agreement/agreement">《用户服务协议及隐私政策》</navigator>
+            。如您同意，请点击“同意”，开始使用【枫叶圈城】
+        </view>
+
+        <view class="btns">
+            <t-button bind:tap="refuse" style="width: 250rpx;" >拒绝</t-button>
+            <t-button bind:tap="agree" style="width: 250rpx;" theme="primary" >同意</t-button>
+
+            
+        </view>
+    </view>
+</t-popup>

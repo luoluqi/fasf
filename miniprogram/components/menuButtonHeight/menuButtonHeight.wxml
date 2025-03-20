@@ -1,0 +1,3 @@
+<!--components/topSpace/topSpace.wxml-->
+<view class="space" style="height: {{height}}px;"></view>
+<view style="height: 10rpx;"></view>

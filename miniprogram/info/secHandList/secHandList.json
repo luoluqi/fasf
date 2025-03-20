@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "二手物品",
+  "navigationStyle":"custom",
+  "usingComponents": {
+    "secHandRecord": "/dataDisplay/secHandRecord/secHandRecord"
+  }
+}

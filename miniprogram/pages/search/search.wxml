@@ -1,0 +1,11 @@
+<topSearchInput bind:confirm="confirm"></topSearchInput>
+
+<view class="title">
+  <view>历史搜索</view>
+  <t-icon bind:tap="clear" name="delete" size="36rpx" style="padding: 30rpx" />
+</view>
+<view class="list">
+  <view bind:tap="select" data-item="{{item}}" wx:for="{{searchHistory}}" class="item">{{item}}</view>
+
+  <view style="clear: both;"></view>
+</view>

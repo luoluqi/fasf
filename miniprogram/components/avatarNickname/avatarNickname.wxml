@@ -1,0 +1,25 @@
+<!--components/avatarNickname/avatarNickname.wxml-->
+<view class="mask" wx:if="{{isShow}}">
+  <view class="bg">
+    <view class="title">请选择您的头像和昵称</view>
+    <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+      <image wx:if="{{avatarUrl}}" class="avatar" src="{{avatarUrl}}"></image>
+      <image wx:else class="avatar" src="/images/user-unlogin.png"></image>
+    </button>
+    <view class="tr">
+      昵称 <input type="nickname" bindblur="nicknameInput" class="nickname" value="{{nickname}}" placeholder="请输入昵称"/>
+    </view>
+
+    <view class="op-p">
+      <!-- <view class="cancel" bind:tap="cancel">取消</view>
+      <view class="confirm" bind:tap="confirm">确定</view> -->
+
+      <t-button bind:tap="cancel" size="middle">取消</t-button>
+      <view style="display: inline-block; width: 30rpx;"></view>
+      <t-button bind:tap="confirm" theme="primary" size="middle">确定</t-button>
+
+  
+    </view>
+    
+  </view>
+</view>

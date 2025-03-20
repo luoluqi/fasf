@@ -1,0 +1,21 @@
+.tag-div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #eee;
+  padding: 20rpx 0;
+  margin: 20rpx 0;
+  color: #333;
+}
+.tag-desc{
+  
+}
+.select-btn{
+  background: var(--td-brand-color);
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10rpx 20rpx;
+  border-radius: 30rpx;
+}

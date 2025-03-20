@@ -1,0 +1,57 @@
+<topSpace></topSpace>
+<menuButtonHeight></menuButtonHeight>
+<view class="app-name">
+  <topSpace></topSpace>
+  <menuButtonHeight></menuButtonHeight>
+  <image src="/images/logo.png" mode="widthFix" class="logo"/>
+</view>
+<view class="ser-con">
+  <view class="search-p">
+    <view bind:tap="toSelectCity" class="city-p">
+      <view>{{city.name}}</view>
+      <t-icon name="caret-down-small" />
+    </view>
+    <view bind:tap="toSearch" class="search-input">
+      <t-tag wx:if="{{keyword}}" catch:tap="stop"
+        max-width="{{130}}" bind:close="closeTag" 
+        closable variant="outline">{{keyword}}</t-tag>
+    </view>
+    <view bind:tap="toSearch" class="sou">搜</view>
+  </view>
+</view>
+
+<view class="func-list">
+  <navigator url="/info/jobList/jobList" class="func-item">
+    <image class="func-img" src="/images/zp200616.png" />
+    <view class="func-text">找工作</view>
+  </navigator>
+  <navigator url="/info/houseList/houseList" class="func-item">
+    <image class="func-img" src="/images/zf200616.png" />
+    <view class="func-text">租房</view>
+  </navigator>
+  <navigator url="/info/secHandList/secHandList" class="func-item">
+    <image class="func-img" src="/images/es200616.png" />
+    <view class="func-text">二手</view>
+  </navigator>
+  <navigator url="/info/localServiceList/localServiceList" class="func-item">
+    <image class="func-img" src="/images/jiazhengfuwu0801.png" />
+    <view class="func-text">本地服务</view>
+  </navigator>
+</view>
+
+<view class="card-list">
+  <view  wx:for="{{list}}" class="card-p">
+    <jobCard wx:if="{{item.dataType == 'job'}}" job="{{item}}" ></jobCard>
+    <houseCard wx:if="{{item.dataType == 'house'}}" house="{{item}}" ></houseCard>
+    <secHandCard wx:if="{{item.dataType == 'secHand'}}" secHand="{{item}}" ></secHandCard>
+    <localServiceCard wx:if="{{item.dataType == 'localService'}}" localService="{{item}}" ></localServiceCard>
+  </view>
+  
+</view>
+<t-divider wx:if="{{isMore}}" content="加载中" style="padding: 50rpx 0;" />
+<t-divider wx:else content="没有更多了" style="padding: 50rpx 0;" />
+
+
+<view style="height: 200rpx;"></view>
+
+<agreementTip></agreementTip>

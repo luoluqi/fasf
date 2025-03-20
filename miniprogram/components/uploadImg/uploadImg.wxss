@@ -1,0 +1,23 @@
+
+.add-img-btn{
+  width: 200rpx; height: 200rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2rpx dashed #999;
+  color: #999;
+}
+
+.image-box{
+  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+}
+.img-con{width: 200rpx;height: 200rpx;position: relative;margin: 0 30rpx 30rpx 0;}
+.img-con{width: 200rpx;height: 200rpx;position: relative;margin: 0 30rpx 30rpx 0;}
+.img-item{width: 100%;height: 100%;}
+.del-img{
+  position: absolute;top: 0rpx;right: 0rpx;
+  /* background: #fff; */
+  color: #bcbcbc;
+}

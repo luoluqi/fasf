@@ -1,0 +1,57 @@
+/* components/avatarNickname/avatarNickname.wxss */
+.mask{
+  position: fixed; z-index: 1000;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+}
+.bg{
+  background: #fff;
+  width: 600rpx; height: 600rpx; margin: 200rpx auto 0 auto;
+  border-radius: 20rpx;
+}
+.title{
+  text-align: center;
+  font-size: 35rpx;
+  padding: 20rpx 0;
+}
+
+.avatar-wrapper {
+  padding: 0;
+  width: 56px !important;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.avatar {
+  display: block;
+  width: 56px;
+  height: 56px;
+}
+.tr{
+  text-align: center;
+}
+.nickname{
+  width: 300rpx;
+  border: 1rpx solid #ccc;
+  display: inline-block; vertical-align: middle;
+  padding: 10rpx 20rpx;
+  box-sizing: content-box;
+  border-radius: 10rpx;
+}
+
+.op-p{
+  text-align: center;
+  padding: 50rpx 0;
+  
+}
+.cancel{
+  display: inline-block; vertical-align: middle ;
+  padding: 20rpx 80rpx; text-align: center;margin: 0 20rpx;
+  background:rgb(145, 145, 145);  color: #fff; border-radius: 15rpx;
+}
+.confirm{
+  display: inline-block; vertical-align: middle ;
+   padding: 20rpx 80rpx; text-align: center; margin: 0 20rpx;
+  background:cornflowerblue;  color: #fff; border-radius: 15rpx;
+}

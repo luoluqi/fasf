@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "jobRecord": "/dataDisplay/jobRecord/jobRecord"
+  }
+}

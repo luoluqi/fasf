@@ -1,0 +1,11 @@
+.parent{
+    display: flex;
+    align-items: center;
+    padding: 20rpx 0;
+}
+.link{
+    color: var(--td-brand-color);
+    display: block;
+    margin: 0 0 0 20rpx;
+    font-size: 28rpx;
+}

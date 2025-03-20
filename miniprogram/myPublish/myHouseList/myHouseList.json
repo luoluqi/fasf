@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "houseRecord": "/dataDisplay/houseRecord/houseRecord"
+  }
+}

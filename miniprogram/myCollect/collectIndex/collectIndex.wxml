@@ -1,0 +1,15 @@
+<t-sticky offset-top="{{ 0 }}">
+  <t-tabs defaultValue="{{tabIndex}}" bind:change="onTabsChange">
+    <t-tab-panel label="招聘" value="{{0}}" />
+    <t-tab-panel label="租房" value="{{1}}" />
+    <t-tab-panel label="二手物品" value="{{2}}" />
+    <t-tab-panel label="本地服务" value="{{3}}" />
+  </t-tabs>
+</t-sticky>
+<collectJobList id="jobList" wx:if="{{tabIndex == 0}}"></collectJobList>
+
+<collectHouseList id="houseList" wx:if="{{tabIndex == 1}}" ></collectHouseList>
+
+<collectSecHandList id="secHandList" wx:if="{{tabIndex == 2}}" ></collectSecHandList>
+
+<collectLocalServiceList id="localServiceList" wx:if="{{tabIndex == 3}}" ></collectLocalServiceList>

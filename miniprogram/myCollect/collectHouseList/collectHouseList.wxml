@@ -1,0 +1,5 @@
+<houseRecord wx:for="{{list}}" house="{{item}}" 
+showOperate="{{true}}" showCollect="{{true}}"
+bind:uncollect="onUncollect" ></houseRecord>
+<t-divider wx:if="{{isMore}}" content="加载中" style="padding: 50rpx 0;" />
+<t-divider wx:else content="没有更多了" style="padding: 50rpx 0;" />

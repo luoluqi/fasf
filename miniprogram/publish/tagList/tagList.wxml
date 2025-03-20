@@ -1,0 +1,23 @@
+<wxs module="_">
+module.exports = {
+  isActive: function(list, tag){
+    var index = list.indexOf(tag)
+    return index != -1
+  }
+}
+</wxs>
+
+<view wx:for="{{list}}" class="tag-p">
+  <view class="title">{{item.title}}</view>
+  <view class="tag-list">
+    <view wx:for="{{item.tagList}}" wx:for-item="tag"
+    data-tag="{{tag}}"
+    bind:tap="onTag"
+     class="tag {{_.isActive(selected, tag) ? 'active' : ''}}">{{tag}}</view>
+  </view>
+
+</view>
+<view style="height: 300rpx;"></view>
+<view class="bottom-fix">
+  <t-button bind:tap="confirm" theme="primary" size="large" block >确定</t-button>
+</view>

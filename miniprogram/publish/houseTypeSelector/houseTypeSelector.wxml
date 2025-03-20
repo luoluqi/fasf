@@ -1,0 +1,50 @@
+<wxs module="_">
+module.exports = {
+  getLabel: function(val, list){
+    for(var i = 0; i < list.length; i++){
+      if(list[i].value == val){
+        return list[i].label
+      }
+    }
+  }
+}
+</wxs>
+
+<view wx:if="{{ dir == '' }}" bind:tap="open" class="placeholder">请选择</view>
+<view wx:else bind:tap="open" >
+{{ _.getLabel(roomNum, roomData) }}
+{{ _.getLabel(hallNum, hallData) }}
+{{ _.getLabel(toiletNum, wcData) }}
+|
+{{ dir }}
+</view>
+
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="bottom">
+  <view class="head-list">
+    <view bind:tap="selectHead" data-type="{{1}}" class="head-item {{headType == 1 ? 'active': ''}}">
+      <view class="head-title">房屋户型</view>
+      <view wx:if="{{ showRoomNum == 0}}" class="head-val">请选择</view>
+      <view wx:else class="head-val">
+        {{ _.getLabel(showRoomNum, roomData) }}
+        {{ _.getLabel(showHallNum, hallData) }}
+        {{ _.getLabel(showToiletNum, wcData) }}
+      </view>
+    </view>
+    <view bind:tap="selectHead" data-type="{{2}}" class="head-item {{headType == 2 ? 'active': ''}}">
+      <view class="head-title">朝向</view>
+      <view wx:if="{{ showDir == '' }}" class="head-val">请选择</view>
+      <view wx:else class="head-val">{{ showDir }}</view>
+    </view>
+  </view>
+
+  <t-picker wx:if="{{headType == 1}}" visible="{{true}}" usePopup="{{false}}" title="请选择厅室数量" cancelBtn="取消" confirmBtn="确认" value="{{ [showRoomNum, showHallNum, showToiletNum] }}" bindcancel="cancel" bindchange="onPickerChange" bindpick="onColumnChange">
+    <t-picker-item options="{{roomData}}"></t-picker-item>
+    <t-picker-item options="{{hallData}}"></t-picker-item>
+    <t-picker-item options="{{wcData}}"></t-picker-item>
+  </t-picker>
+
+  <t-picker wx:if="{{headType == 2}}" visible="{{true}}" usePopup="{{false}}" title="请选择朝向" cancelBtn="取消" confirmBtn="确认" value="{{ [showDir] }}" bindcancel="cancel" bindchange="onPickerChange" bindpick="onColumnChange">
+    <t-picker-item options="{{dirData}}"></t-picker-item>
+  </t-picker>
+
+</t-popup>

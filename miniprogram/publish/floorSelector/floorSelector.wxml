@@ -1,0 +1,30 @@
+<wxs module="_">
+module.exports = {
+  getLabel: function(val, list){
+    for(var i = 0; i < list.length; i++){
+      if(list[i].value == val){
+        return list[i].label
+      }
+    }
+  }
+}
+</wxs>
+
+
+<view bind:tap="open" wx:if="{{curFloor != 0}}" >{{_.getLabel(curFloor, floorList)}} | {{ _.getLabel(totalFloor, totalList) }}</view>
+<view bind:tap="open" wx:else class="placeholder">请选择</view>
+
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="bottom">
+  <view class="sub-title">楼层 | 总楼层</view>
+  <view class="floor-total" >{{_.getLabel(showCurFloor, floorList)}} | {{_.getLabel(showTotalFloor,totalList )}}</view>
+  <t-picker visible="{{true}}" usePopup="{{false}}" title="请选择" cancelBtn="取消" confirmBtn="确认" 
+  value="{{[showCurFloor, showTotalFloor]}}"
+  bindcancel="cancel"
+  bindchange="onPickerChange"
+  bindpick="onColumnChange"
+  >
+    <t-picker-item options="{{floorList}}"></t-picker-item>
+    <t-picker-item options="{{totalList}}"></t-picker-item>
+  </t-picker>
+
+</t-popup>

@@ -1,0 +1,19 @@
+<view wx:if="{{value == ''}}" bind:tap="open" class="placeholder">请选择</view>
+<view wx:else bind:tap="open">{{value}}</view>
+
+<t-popup visible="{{visible}}" bind:visible-change="onVisibleChange" placement="bottom">
+
+  <t-date-time-picker
+  usePopup="{{false}}"
+  title="{{title}}"
+ 
+  mode="{{mode}}"
+  value="{{value}}"
+  format="{{format}}"
+  bindchange="onConfirm"
+  bindpick="onColumnChange"
+  bindcancel="cancel"
+ 
+/>
+
+</t-popup>

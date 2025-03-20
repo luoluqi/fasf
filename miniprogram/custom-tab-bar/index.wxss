@@ -1,0 +1,50 @@
+
+.tab-list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10rpx 0;
+  box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.2);
+  background: #fff;
+}
+.tab-item{
+  flex-grow: 1;
+}
+.tab-img{
+  width: 46rpx; height: 46rpx;
+  display: block;
+  margin: 0 auto;
+}
+.tab-text{
+  text-align: center;
+  color: #72777d;
+  font-size: 24rpx;
+  padding: 6rpx 0 0 0;
+}
+.active {
+  color: #fe552e !important;
+}
+.active .tab-text{
+  color: #fe552e !important;
+}
+.publish-p{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.publish{
+  font-size: 30rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: 10rpx;
+    text-align: center;
+    box-shadow: 0 0 10rpx 0 #fe552e30;
+    background: #fe552e;
+    color: #fff;
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}

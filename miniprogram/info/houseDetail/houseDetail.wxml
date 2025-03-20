@@ -1,0 +1,104 @@
+<t-swiper current="{{0}}" autoplay="{{true}}" duration="{{500}}" interval="{{3000}}" navigation="{{ { type: 'fraction' } }}" list="{{house.imgList}}" bind:click="onTapSwiper">
+</t-swiper>
+
+<view class="title">{{house.type == 1 ? '整租' : '合租'}} | {{house.community}}</view>
+<view class="price-p">
+    <label class="price">{{house.money}}</label>
+    <label class="unit">{{unitStr}}/月</label>
+    <label class="pay-type">{{house.payType}}</label>
+</view>
+
+<view class="house-spec">
+    <view class="house-spec-item">
+        <view class="house-spec-top">{{house.roomNum}}室{{house.hallNum}}厅{{house.toiletNum}}卫</view>
+        <view class="house-spec-bot">{{house.type == 1 ? '整租' : '合租'}}</view>
+    </view>
+    <view class="house-spec-item">
+        <view class="house-spec-top">{{house.area}}㎡</view>
+        <view class="house-spec-bot">面积</view>
+    </view>
+    <view class="house-spec-item">
+        <view class="house-spec-top">{{house.curFloor}}/{{house.totalFloor}}层</view>
+        <view class="house-spec-bot">楼层</view>
+    </view>
+    <view class="house-spec-item">
+        <view class="house-spec-top">{{house.dir}}</view>
+        <view class="house-spec-bot">朝向</view>
+    </view>
+</view>
+
+<view class="bq-list">
+    <view wx:for="{{featureList}}"  class="bq">{{item}}</view>
+   
+</view>
+
+<view class="address">
+    <view bind:tap="openLocation" class="address-name">
+        <t-icon name="houses" style="margin: 0 10rpx 0 0;" />
+        <view>{{house.community}}</view>
+    </view>
+    <t-icon name="chevron-right" />
+</view>
+<view bind:tap="openLocation" class="address">
+    <view class="address-name">
+        <t-icon name="location" style="margin: 0 10rpx 0 0;" />
+        <view>{{house.locationName}}</view>
+    </view>
+    <t-icon name="chevron-right" />
+</view>
+<view bind:tap="callPhone" wx:if="{{house.phone}}" class="address">
+    <view class="address-name">
+        <t-icon name="chat-double" style="margin: 0 10rpx 0 0;" />
+        <view>联系电话 {{house.phone}}</view>
+    </view>
+    <t-icon name="chevron-right" />
+</view>
+<view wx:if="{{house.wechat}}" class="address">
+    <view class="address-name">
+        <t-icon name="logo-wechat-stroke" style="margin: 0 10rpx 0 0;" />
+        <view>微信号 {{house.wechat}}</view>
+    </view>
+    <t-icon name="chevron-right" />
+</view>
+<view class="line"></view>
+<view class="kan-title">房租包含费用</view>
+<view class="desc">
+    <label wx:for="{{house.cost}}">{{item}}、</label>
+    <label wx:if="{{house.cost.length == 0}}">无</label>
+</view>
+<view class="line"></view>
+<view class="kan-title">看房必读</view>
+<view class="kan-tr">
+    <view class="kan-key">看房时间</view>
+    <view class="kan-val">{{house.lookTime}}</view>
+</view>
+<view class="kan-tr">
+    <view class="kan-key">入住要求</view>
+    <view class="kan-val">
+        <lable wx:for="{{demand}}">{{item}} <block wx:if="{{index < demand.length - 1}}">、</block></lable>
+    </view>
+</view>
+<view class="line"></view>
+<view class="kan-title">房屋介绍</view>
+<view class="desc">{{house.remark}}</view>
+
+<view class="tab-list">
+    <view wx:for="{{configList}}" class="tab-item">
+        <t-icon class="tab-icon" name="check" />
+        <view class="tab-name">{{item}}</view>
+    </view>
+    <!-- <view wx:for="{{5}}" class="tab-item gray"> 
+    <t-icon class="tab-icon" name="close" />
+    <view class="tab-name">冰箱</view>
+  </view> -->
+</view>
+
+<view style="clear: both; height: 30rpx;"></view>
+
+<mapBlock width="{{750}}" height="{{500}}"
+ longitude="{{house.longitude}}" latitude="{{house.latitude}}"
+ bind:mtap="openLocation"></mapBlock>
+
+<bottomBtns status="{{house.status}}" isCollect="{{collectObj}}" phone="{{house.phone}}" wechat="{{house.wechat}}"
+bind:collect="collect"
+></bottomBtns>

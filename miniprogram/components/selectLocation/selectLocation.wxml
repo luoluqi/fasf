@@ -1,0 +1,2 @@
+<view wx:if="{{locationName}}" bind:tap="open" >{{locationName}}</view>
+<view wx:else bind:tap="open" class="placeholder">请选择</view>

@@ -1,0 +1,13 @@
+
+<view wx:for="{{list}}" class="order">
+  <view>{{item._id}}</view>
+  <view>{{item.transactionId}}</view>
+  <view>{{item.title}}</view>
+  <view>{{item.status}}</view>
+  <t-button bind:tap="refund" data-id="{{item._id}}" wx:if="{{item.status == 1}}" theme="danger">退款</t-button>
+  <t-button bind:tap="share" data-item="{{item}}" wx:if="{{item.status == 1}}" theme="primary">分账</t-button>
+  <view wx:if="{{item.status == 2}}" >已退款</view>
+</view>
+
+<t-divider wx:if="{{isMore}}" content="加载中" style="padding: 50rpx 0;" />
+<t-divider wx:else content="没有更多了" style="padding: 50rpx 0;" />

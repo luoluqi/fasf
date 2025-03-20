@@ -1,0 +1,10 @@
+<view bind:tap="toDetail" class="card-item">
+  <view class="data-label">租房</view>
+  <image class="card-img" src="{{house.imgList[0]}}" mode="aspectFill" />
+  <view class="card-title">{{house.type == 1 ? '整租' : '合租'}} | {{house.community}}</view>
+  <view class="card-desc">{{house.roomNum}}室{{house.hallNum}}厅{{house.toiletNum}}卫 · {{house.area}}㎡</view>
+  <view class="card-tab-list">
+    <view wx:for="{{tagList}}" wx:for-item="tag" class="card-tab">{{tag}}</view>
+  </view>
+  <view class="price">{{house.money}}{{unitStr}}</view>
+</view>

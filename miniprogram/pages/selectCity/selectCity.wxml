@@ -1,0 +1,19 @@
+
+<topSearch bind:confirm="searchConfirm"></topSearch>
+<view id="container" class="container" style="top: {{top}}px; height: {{height}}px;" >
+
+  <view class="left">
+    <view wx:for="{{countryList}}" bind:tap="selectCountry" data-country="{{item}}"
+     class="country {{item._id == country._id ? 'active' : ''}}">
+      <view class="country-name">{{item.name}}</view> 
+      <view>{{item.english}}</view>
+    </view>
+  </view>
+  <view class="right">
+    <view wx:for="{{cityList}}" bind:tap="selectCity" data-city="{{item}}" class="city">
+      <view class="city-name">{{item.name}}</view> 
+      <view>{{item.english}}</view>
+    </view>
+   
+  </view>
+</view>

@@ -1,0 +1,22 @@
+<view class="tab-list">
+  <view class="tab-item {{selected == 0 ? 'active': ''}}" data-path="/pages/home/home" data-index="0" bindtap="switchTab">
+    <t-icon name="home" size="36rpx" />
+    <view class="tab-text">首页</view>
+  </view>
+  <view class="tab-item {{selected == 1 ? 'active': ''}}" data-path="/pages/map/map" data-index="1" bindtap="switchTab">
+    <t-icon name="location" size="36rpx" />
+    <view class="tab-text">地图</view>
+  </view>
+  <view class="publish-p">
+    <view bindtap="toAdd" class="publish">
+      <t-icon name="add" />
+      发布
+    </view>
+  </view>
+  
+  <view class="tab-item {{selected == 2 ? 'active': ''}}" data-path="/pages/my/my" data-index="2" bindtap="switchTab">
+    <t-icon name="user" size="36rpx" />
+    <view class="tab-text">我的</view>
+  </view>
+</view>
+

@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "localServiceRecord": "/dataDisplay/localServiceRecord/localServiceRecord"
+  }
+}
